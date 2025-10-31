@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome - AuthCore{% endblock %}
+
+{% block content %}
+    <div class="text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">Welcome to AuthCore</h1>
+        <p class="text-xl text-gray-300 mb-8">Your secure and reliable authentication partner.</p>
+        <p class="text-gray-400 mb-4">
+            We provide a robust, enterprise-grade security layer for your applications.
+            Manage user access, secure passwords, and ensure peace of mind with our battle-tested
+            authentication and security protocols.
+        </p>
+        <div class="space-x-4">
+            <a href="{{ url_for('login_page') }}" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300">
+                Access Portal
+            </a>
+            <a href="{{ url_for('register_page') }}" class="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300">
+                Create Account
+            </a>
+        </div>
+    </div>
+{% endblock %}

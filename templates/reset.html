@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Reset Password{% endblock %}
+
+{% block content %}
+    <div class="bg-gray-800 shadow-2xl rounded-lg p-8 max-w-md mx-auto">
+        <h2 class="text-3xl font-bold text-center text-white mb-6">Reset Your Password</h2>
+        <form id="reset-form" class="space-y-6">
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-300 mb-2">Username</label>
+                <input type="text" id="username" name="username" required
+                       class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                       placeholder="Your username">
+            </div>
+            <div>
+                <label for="old_password" class="block text-sm font-medium text-gray-300 mb-2">Old Password</label>
+                <input type="password" id="old_password" name="old_password" required
+                       class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                       placeholder="Your current password">
+            </div>
+            <div>
+                <label for="new_password" class="block text-sm font-medium text-gray-300 mb-2">New Password</label>
+                <input type="password" id="new_password" name="new_password" required
+                       class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                       placeholder="Your new strong password">
+            </div>
+            <button type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Update Password
+            </button>
+        </form>
+        <!-- JS will place messages here -->
+        <div id="message" class="message"></div>
+    </div>
+{% endblock %}
